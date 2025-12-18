@@ -1,30 +1,40 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-
+import safe_space from '../assets/safe-space.png'
+import study_buddy from '../assets/study-budy.png'
+import pobly_ecommerce from '../assets/pobly.png'
 const projects = [
+       {
+        title: 'Pobly E-commerce',
+        description: 'An e-commerce platform for buying books.',
+        tags: ['React', 'Node.js', 'sql'],
+        github: 'https://github.com/VictorOduorKe/pobly-ecommerce.git',
+        demo: 'https://pobly-ecommerce-frontend.onrender.com',
+        image: `${pobly_ecommerce}`
+    },
     {
         title: 'AI-Powered Study Planner',
-        description: 'An intelligent system that generates adaptive study plans from course outlines using AI. Features raw content storage and weekly mood analysis for dynamic adjustments.',
-        tags: ['React', 'Node.js', 'OpenAI API', 'PostgreSQL'],
-        github: '#',
-        demo: '#',
-        image: 'https://via.placeholder.com/600x400'
+        description: 'An intelligent system that generates Study plans.',
+        tags: ['React', 'Node.js', 'OpenAI API', 'sql'],
+        github: 'https://github.com/VictorOduorKe/studyAiBudy.git',
+        demo: 'https://studyaibudy.netlify.app/',
+        image: `${study_buddy}`
     },
     {
         title: 'Online OB Generator',
         description: 'PHP-based system for remote Occurrence Book reporting. Includes police post search and PDF generation for unique OB numbers.',
         tags: ['PHP', 'MySQL', 'Bootstrap', 'FPDF'],
-        github: '#',
+        github: 'https://github.com/VictorOduorKe/ob_requests.git',
         demo: '#',
         image: 'https://via.placeholder.com/600x400'
     },
     {
-        title: 'Telecom Offer Automation',
-        description: 'Automated purchase system integrating M-PESA/Paystack payments with Puppeteer for telecom offer fulfillment.',
-        tags: ['Node.js', 'Puppeteer', 'M-PESA', 'Express'],
-        github: '#',
-        demo: '#',
-        image: 'https://via.placeholder.com/600x400'
+        title: 'Safe Space',
+        description: 'A platform for reporting any gender based cases.',
+        tags: ['React', 'GEMINI API', 'postgre', 'python'],
+        github: 'https://github.com/VictorOduorKe/collaborative-space.git',
+        demo: 'https://collaborative-space.onrender.com',
+        image: `${safe_space}`
     }
 ];
 
