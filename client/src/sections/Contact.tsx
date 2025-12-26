@@ -80,7 +80,7 @@ const Contact = () => {
                                     {...register('name')}
                                     type="text"
                                     className={`w-full px-4 py-3 bg-dark border ${errors.name ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
-                                    placeholder="John Doe"
+                                    placeholder="Your Name"
                                 />
                                 {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
                             </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                                     {...register('email')}
                                     type="email"
                                     className={`w-full px-4 py-3 bg-dark border ${errors.email ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
-                                    placeholder="john@example.com"
+                                    placeholder="Your Email"
                                 />
                                 {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
                             </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                                 {...register('message')}
                                 rows={5}
                                 className={`w-full px-4 py-3 bg-dark border ${errors.message ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white resize-none`}
-                                placeholder="Hello, I'd like to talk about..."
+                                placeholder="Your Message"
                             ></textarea>
                             {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>}
                         </div>
