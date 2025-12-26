@@ -75,7 +75,7 @@ ${message}
     res.status(200).json({ message: 'Message sent successfully!' });
   } catch (error) {
     console.error('Telegram Error:', error.message);
-    res.status(500).json({ message: 'Failed to send message.' });
+    res.status(500).json({ message: 'Failed to send message. Please try again later.' });
   }
 });
 
