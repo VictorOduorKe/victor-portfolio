@@ -26,16 +26,16 @@ router.post('/', validateContact, async (req, res) => {
   const chatId = process.env.TG_CHAT_ID;
 
   const formattedMessage = `
-<b>🌟 New Portfolio Contact 🌟</b>
+<b>New Portfolio Contact </b>
 
-👤 <b>Name:</b> ${name}
-📧 <b>Email:</b> <code>${email}</code>
+ <b>Name:</b> ${name}
+ <b>Email:</b> <code>${email}</code>
 
 
-💬 <b>Message:</b>
+ <b>Message:</b>
 ${message}
 
-📅 <b>Date:</b> ${new Date().toLocaleString()}
+ <b>Date:</b> ${new Date().toLocaleString()}
   `;
 
   try {
