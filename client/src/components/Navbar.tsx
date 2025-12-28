@@ -11,7 +11,7 @@ const Navbar = () => {
         { name: 'Projects', href: '#projects' },
         { name: 'Experience', href: '#experience' },
         { name: 'Contact', href: '#contact' },
-        { name: 'Resume', href: '/resume.pdf' },
+        { name: 'Resume', href: 'https://drive.google.com/file/d/1uDktLaE2dXuEx27dQCkyRZdsPsxLzOfg/view?usp=sharing' },
     ];
 
     return (
