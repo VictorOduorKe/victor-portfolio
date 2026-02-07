@@ -8,7 +8,8 @@ import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 
 // Validation Schema
 const contactSchema = z.object({
-    name: z.string().min(2, 'Name must be at least 2 characters'),
+    name: z.string().min(2, 'Name must be at least 2 characters').max(100, 'Name must be at most 100 characters'),
+    phone: z.string().min(10, 'Phone number must be at least 10 characters').max(15, 'Phone number must be at most 15 characters'),
     email: z.string().email('Invalid email address'),
     message: z.string().min(10, 'Message must be at least 10 characters').max(500, 'Message cannot exceed 500 characters'),
 });
@@ -84,7 +85,16 @@ const Contact = () => {
                                 />
                                 {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
                             </div>
-
+                           <div>
+                            <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">Phone</label>
+                            <input
+                                {...register('phone')}
+                                type="tel"
+                                className={`w-full px-4 py-3 bg-dark border ${errors.phone ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
+                                placeholder="Your Phone"
+                            />
+                            {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
+                        </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
                                 <input

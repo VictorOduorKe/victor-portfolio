@@ -10,6 +10,7 @@ const router = express.Router();
 const validateContact = [
   body('name').trim().isLength({ min: 2 }).withMessage('Name must be at least 2 characters'),
   body('email').trim().isEmail().withMessage('Invalid email address'),
+  body('phone').trim().isLength({ min: 10 }).withMessage('Phone number must be at least 10 characters').isLength({ max: 15 }).withMessage('Phone number must not exceed 15 characters'),
   body('message')
     .trim()
     .notEmpty().withMessage('Message is required')
@@ -30,22 +31,25 @@ router.post('/', contactLimiter, validateContact, async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { name, email, message } = req.body;
+  const { name, email, message, phone } = req.body;
   const token = process.env.TG_BOT_TOKEN;
   const chatId = process.env.TG_CHAT_ID;
 
-  const formattedMessage = `
-<b>New Portfolio Contact </b>
+ const formattedMessage = `
+<b>New Portfolio Contact Submission</b>
+────────────────────────────
 
- <b>Name:</b> ${name}
- <b>Email:</b> <code>${email}</code>
+<b>Contact Details</b>
+<b>Name:</b> ${name}
+<b>Email:</b> <code>${email}</code>
+<b>Phone:</b> <code>${phone}</code>
 
-
- <b>Message:</b>
+<b>Message</b>
 ${message}
 
- <b>Date:</b> ${new Date().toLocaleString()}
-  `;
+────────────────────────────
+<b>Submitted on:</b> ${new Date().toLocaleString()}
+`;
 
   try {
     if (!token || !chatId) {
