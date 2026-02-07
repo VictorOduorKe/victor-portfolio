@@ -35,6 +35,13 @@ router.post('/', contactLimiter, validateContact, async (req, res) => {
   const token = process.env.TG_BOT_TOKEN;
   const chatId = process.env.TG_CHAT_ID;
 
+const formattedTime = new Date().toLocaleString("en-KE", {
+  timeZone: "Africa/Nairobi",
+  dateStyle: "medium",
+  timeStyle: "short",
+});
+
+
  const formattedMessage = `
 <b>New Portfolio Contact Submission</b>
 ────────────────────────────
@@ -48,7 +55,7 @@ router.post('/', contactLimiter, validateContact, async (req, res) => {
 ${message}
 
 ────────────────────────────
-<b>Submitted on:</b> ${new Date().toLocaleString()}
+<b>Submitted on:</b> ${formattedTime}
 `;
 
   try {
