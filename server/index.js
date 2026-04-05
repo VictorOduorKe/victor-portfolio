@@ -34,6 +34,11 @@ app.get('/health', (req, res) => {
     res.send('Portfolio API is running...');
 });
 
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.send("User-agent: *\nAllow: /\nSitemap: https://victor-portfolio-qqer.onrender.com/sitemap.xml");
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
