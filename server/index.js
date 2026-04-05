@@ -23,9 +23,9 @@ const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, 
     max: 100 
 });
-app.use(limiter);
+//app.use(limiter);
 
-app.use('/api/contact', contactRoutes);
+app.use('/api/contact',limiter, contactRoutes);
 app.use('/', sitemapRoutes);
 app.use('/', googleFileRoutes);
 
