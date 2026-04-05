@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact.js';
 import sitemapRoutes from './routes/sitemap.route.js';
+import googleFileRoutes from './routes/google-file.route.js';
 dotenv.config();
 
 const app = express();
@@ -26,6 +27,7 @@ app.use(limiter);
 
 app.use('/api/contact', contactRoutes);
 app.use('/', sitemapRoutes);
+app.use('/', googleFileRoutes);
 
 app.get('/health', (req, res) => {
     if (!app) {
