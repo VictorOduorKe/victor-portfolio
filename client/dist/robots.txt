@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://victor-portfolio-qqer.onrender.com/sitemap.xml
