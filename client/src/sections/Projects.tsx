@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import safe_space from '../assets/safe-space.png'
 import study_buddy from '../assets/study-budy.png'
 import pobly_ecommerce from '../assets/pobly.png'
+import inventory from '../assets/inventory.png'
 const projects = [
        {
         title: 'Pobly E-commerce',
@@ -35,6 +36,14 @@ const projects = [
         github: 'https://github.com/VictorOduorKe/collaborative-space.git',
         demo: 'https://collaborative-space.onrender.com',
         image: `${safe_space}`
+    },
+    {
+        title: 'Offline Inventory',
+        description: 'Offline inventory with qr code geretor for tacking inventory items.',
+        tags: ['Html', 'css', 'js','php'],
+        github: 'https://github.com/VictorOduorKe/ict_inventory.git',
+        demo: '#',
+        image: `${inventory}`
     }
 ];
 

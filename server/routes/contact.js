@@ -18,11 +18,11 @@ const validateContact = [
 ];
 
 const contactLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
-  max: 3, // Limit each IP to 3 requests per windowMs
+  windowMs: 60 * 60 * 1000, 
+  max: 3,
   message: { message: 'Too many requests from this IP, please try again after an hour' },
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  standardHeaders: true, 
+  legacyHeaders: false, 
 });
 
 router.post('/', contactLimiter, validateContact, async (req, res) => {
