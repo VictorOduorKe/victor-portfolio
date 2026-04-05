@@ -20,7 +20,7 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-gray-900 border-t border-gray-800">
+        <section id="experience" className="py-20 bg-white border-t border-slate-200">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const Experience = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Experience & Roadmap</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Experience & Roadmap</h2>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
                 </motion.div>
 
@@ -45,13 +45,13 @@ const Experience = () => {
                         >
                             <div className="flex flex-col items-center">
                                 <div className="w-4 h-4 bg-primary rounded-full ring-4 ring-primary/20"></div>
-                                <div className="w-0.5 h-full bg-gray-800 my-2"></div>
+                                <div className="w-0.5 h-full bg-slate-200 my-2"></div>
                             </div>
                             <div className="pb-8">
                                 <span className="text-secondary font-mono text-sm">{item.year}</span>
-                                <h3 className="text-xl font-bold text-white mt-1">{item.title}</h3>
-                                <p className="text-gray-400 font-medium">{item.company}</p>
-                                <p className="text-gray-400 mt-2 max-w-lg">{item.description}</p>
+                                <h3 className="text-xl font-bold text-slate-800 mt-1">{item.title}</h3>
+                                <p className="text-slate-500 font-medium">{item.company}</p>
+                                <p className="text-slate-600 mt-2 max-w-lg">{item.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -67,9 +67,9 @@ const Experience = () => {
                             <div className="w-4 h-4 bg-green-500 rounded-full ring-4 ring-green-500/20"></div>
                         </div>
                         <div className="pb-0">
-                            <span className="text-green-400 font-mono text-sm">Future Goal</span>
-                            <h3 className="text-xl font-bold text-white mt-1">Network Security Engineer</h3>
-                            <p className="text-gray-400 mt-2 max-w-lg">
+                            <span className="text-green-600 font-mono text-sm">Future Goal</span>
+                            <h3 className="text-xl font-bold text-slate-800 mt-1">Network Security Engineer</h3>
+                            <p className="text-slate-600 mt-2 max-w-lg">
                                 Focusing on Huawei ecosystem, cybersecurity concepts, and advanced network defense strategies.
                             </p>
                         </div>

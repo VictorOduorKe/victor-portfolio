@@ -20,7 +20,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <section id="skills" className="py-20 bg-gray-900 border-t border-gray-800">
+        <section id="skills" className="py-20 bg-slate-50 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ const Skills = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Core Skills</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">Core Skills</h2>
                     <div className="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
                 </motion.div>
 
@@ -41,10 +41,10 @@ const Skills = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.05 }}
-                            className="bg-dark p-6 rounded-xl flex flex-col items-center justify-center border border-gray-800 hover:border-gray-600 hover:shadow-lg transition-all"
+                            className="bg-white p-6 rounded-xl flex flex-col items-center justify-center border border-slate-200 hover:border-slate-300 hover:shadow-md transition-all"
                         >
                             <skill.icon className="text-4xl mb-3" style={{ color: skill.color }} />
-                            <span className="text-gray-300 font-medium">{skill.name}</span>
+                            <span className="text-slate-600 font-medium">{skill.name}</span>
                         </motion.div>
                     ))}
                 </div>

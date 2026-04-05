@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-dark text-white">
+        <section id="contact" className="py-20 bg-slate-50 text-slate-800">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const Contact = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-                    <p className="mt-4 text-gray-400">
+                    <p className="mt-4 text-slate-600">
                         Have a project in mind or want to discuss network security? Drop me a message!
                     </p>
                 </motion.div>
@@ -71,36 +71,36 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-800"
+                    className="bg-white p-8 rounded-2xl shadow-md border border-slate-200"
                 >
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                         <div className="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                                <label htmlFor="name" className="block text-sm font-medium text-slate-600 mb-2">Name</label>
                                 <input
                                     {...register('name')}
                                     type="text"
-                                    className={`w-full px-4 py-3 bg-dark border ${errors.name ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
+                                    className={`w-full px-4 py-3 bg-slate-50 border ${errors.name ? 'border-red-500' : 'border-slate-300'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-slate-800`}
                                     placeholder="Your Name"
                                 />
                                 {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
                             </div>
                            <div>
-                            <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-2">Phone</label>
+                            <label htmlFor="phone" className="block text-sm font-medium text-slate-600 mb-2">Phone</label>
                             <input
                                 {...register('phone')}
                                 type="tel"
-                                className={`w-full px-4 py-3 bg-dark border ${errors.phone ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
+                                className={`w-full px-4 py-3 bg-slate-50 border ${errors.phone ? 'border-red-500' : 'border-slate-300'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-slate-800`}
                                 placeholder="Your Phone"
                             />
                             {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
                         </div>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                                <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-2">Email</label>
                                 <input
                                     {...register('email')}
                                     type="email"
-                                    className={`w-full px-4 py-3 bg-dark border ${errors.email ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white`}
+                                    className={`w-full px-4 py-3 bg-slate-50 border ${errors.email ? 'border-red-500' : 'border-slate-300'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-slate-800`}
                                     placeholder="Your Email"
                                 />
                                 {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
@@ -108,11 +108,11 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <label htmlFor="message" className="block text-sm font-medium text-slate-600 mb-2">Message</label>
                             <textarea
                                 {...register('message')}
                                 rows={5}
-                                className={`w-full px-4 py-3 bg-dark border ${errors.message ? 'border-red-500' : 'border-gray-700'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-white resize-none`}
+                                className={`w-full px-4 py-3 bg-slate-50 border ${errors.message ? 'border-red-500' : 'border-slate-300'} rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors text-slate-800 resize-none`}
                                 placeholder="Your Message"
                             ></textarea>
                             {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>}
@@ -121,7 +121,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full md:w-auto px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 mx-auto"
+                            className="w-full md:w-auto px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 mx-auto"
                         >
                             {isSubmitting ? (
                                 <>

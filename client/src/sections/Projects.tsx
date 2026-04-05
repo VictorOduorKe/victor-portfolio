@@ -49,7 +49,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-20 bg-dark text-white">
+        <section id="projects" className="py-20 bg-white text-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:border-gray-600 transition-all group"
+                            className="bg-white rounded-xl overflow-hidden shadow-md border border-slate-200 hover:border-slate-300 transition-all group"
                         >
                             <div className="relative overflow-hidden h-48">
                                 <img
@@ -79,10 +79,10 @@ const Projects = () => {
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                    <a href={project.github} className="p-2 bg-white text-dark rounded-full hover:bg-gray-200 transition-colors" title="View Code">
+                                    <a href={project.github} className="p-2 bg-white text-slate-800 rounded-full hover:bg-slate-200 transition-colors" title="View Code">
                                         <FaGithub size={20} />
                                     </a>
-                                    <a href={project.demo} className="p-2 bg-primary text-white rounded-full hover:bg-sky-600 transition-colors" title="Live Demo">
+                                    <a href={project.demo} className="p-2 bg-primary text-white rounded-full hover:bg-blue-600 transition-colors" title="Live Demo">
                                         <FaExternalLinkAlt size={18} />
                                     </a>
                                 </div>
@@ -90,10 +90,10 @@ const Projects = () => {
 
                             <div className="p-6">
                                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                                <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.description}</p>
+                                <p className="text-slate-600 text-sm mb-4 line-clamp-3">{project.description}</p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map(tag => (
-                                        <span key={tag} className="px-3 py-1 bg-gray-800 text-xs text-secondary rounded-full border border-gray-700">
+                                        <span key={tag} className="px-3 py-1 bg-slate-100 text-xs text-slate-700 rounded-full border border-slate-200">
                                             {tag}
                                         </span>
                                     ))}

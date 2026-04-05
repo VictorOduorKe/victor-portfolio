@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const NotFound = () => {
     return (
-        <div className="min-h-screen bg-dark flex flex-col items-center justify-center text-white px-4">
+        <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center text-slate-800 px-4">
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}

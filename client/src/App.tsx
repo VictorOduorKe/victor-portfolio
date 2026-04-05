@@ -21,7 +21,7 @@ const MainLayout = () => (
             <Experience />
             <Contact />
         </main>
-        <footer className="bg-dark py-8 text-center text-gray-500 text-sm border-t border-gray-800">
+        <footer className="bg-slate-50 py-8 text-center text-slate-500 text-sm border-t border-slate-200">
             <p>© {new Date().getFullYear()} Victor Oduor. All rights reserved.</p>
             <p className="mt-2">Built with React, Node.js & Tailwind CSS</p>
         </footer>
@@ -31,12 +31,12 @@ const MainLayout = () => (
 function App() {
     return (
         <Router>
-            <div className="bg-dark min-h-screen text-white font-sans selection:bg-primary selection:text-white">
+            <div className="bg-white min-h-screen text-slate-800 font-sans selection:bg-primary selection:text-white">
                 <Routes>
                     <Route path="/" element={<MainLayout />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                <ToastContainer position="bottom-right" theme="dark" />
+                <ToastContainer position="bottom-right" theme="light" />
             </div>
         </Router>
     );

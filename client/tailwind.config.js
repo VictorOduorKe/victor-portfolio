@@ -7,10 +7,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#0ea5e9', // Sky 500
-                secondary: '#6366f1', // Indigo 500
-                dark: '#0f172a', // Slate 900
-                light: '#f8fafc', // Slate 50
+                primary: '#3b82f6', // blue-500
+                secondary: '#1e40af', // blue-800 (Navy outline/text)
+                dark: '#1e293b', // slate-800
+                light: '#ffffff', // white
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
